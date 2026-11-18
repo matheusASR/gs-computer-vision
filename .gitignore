@@ -1,0 +1,57 @@
+# Python: caches, bytecode e ferramentas
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# IDEs e sistema operacional
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Segredos e configuracoes locais
+.env
+.env.*
+!.env.example
+*.local
+
+# Modelos exportados / pesos treinados
+# O demo.py precisa de best.pt: distribua-o separadamente
+# ou use Git LFS se decidir versionar pesos.
+*.pt
+*.onnx
+*.engine
+*.tflite
+
+# Resultados, checkpoints e logs
+runs/
+computer_vision/results/**
+!computer_vision/results/README.md
+!computer_vision/results/.gitkeep
+*.log
+
+# Dataset bruto e exportacao Roboflow
+# Manter os metadados e scripts de preparacao versionados,
+# sem publicar automaticamente imagens e anotacoes.
+computer_vision/dataset/roboflow_export/
+computer_vision/dataset/images/**
+computer_vision/dataset/labels/**
+
+# Permitir arquivos de estrutura das pastas
+!computer_vision/dataset/images/**/
+!computer_vision/dataset/images/**/.gitkeep
+!computer_vision/dataset/labels/**/
+!computer_vision/dataset/labels/**/.gitkeep
+
+# Outros arquivos temporarios
+*.tmp
+*.bak
