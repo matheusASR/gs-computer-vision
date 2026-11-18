@@ -231,7 +231,24 @@ Para abrir a calibração manual experimental (requer ambiente com interface gr�
 python computer_vision/src/interactive_calibration.py
 ```
 
-**Observação:** instalar as dependências não substitui o arquivo `best.pt`, que precisa ser disponibilizado separadamente caso não esteja versionado no repositório. O conjunto de imagens também precisa estar presente localmente.
+**Observação:** 
+## Modelo treinado
+
+O projeto utiliza o modelo YOLO11n, treinado para detectar réguas de medição (`staff_gauge`) e marcações de nível da água (`water_level`).
+
+Os pesos treinados estão disponíveis na release `v1.0.0`:
+
+**[Baixar modelo best.pt](https://github.com/matheusASR/gs-computer-vision/releases/download/v1.0.0/best.pt)**
+
+Após baixar o arquivo, coloque-o no seguinte diretório:
+
+```text
+computer_vision/results/training/alerta_corrego_yolo11n/weights/best.pt
+```
+
+Caso as pastas não existam, crie-as manualmente.
+
+O modelo será carregado automaticamente pelos scripts de inferência que utilizam esse caminho.
 
 ### Limitações e próximos passos
 
